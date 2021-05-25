@@ -1,0 +1,89 @@
+body {
+	background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+input {
+    width: 175px;
+    height: 30px;
+    font-size: 20px;
+}
+h1 {
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+table {
+    margin: 100px auto;
+    border-collapse: collapse; 
+    line-height: 1.1;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background:  radial-gradient(farthest-corner at 50% 50%, white, #DCECF8);
+    color: #0C213B;
+    font-size: 30px;
+  }
+
+ .tables {
+    display: flex;
+    margin: 0 auto;
+ }
+
+tr {
+  cursor: pointer;
+}
+th {
+  padding: 10px; 
+  font-size: 20px;
+  border: 1px solid #A9E2CC;
+}
+td {
+  font-size: 0.6em;
+  padding: 5px 7px;
+  border: 1px solid #A9E2CC;
+}
+.table_sort table {
+  border-collapse: collapse;
+}
+
+.table_sort th {
+  color: #ffebcd;
+  background: #008b8b;
+  cursor: pointer;
+}
+
+.table_sort td,
+.table_sort th {
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  border: 2px solid #846868;
+}
+
+.table_sort tbody tr:nth-child(even) {
+  background: #e3e3e3;
+}
+
+th.sorted[data-order="1"],
+th.sorted[data-order="-1"] {
+  position: relative;
+}
+
+th.sorted[data-order="1"]::after,
+th.sorted[data-order="-1"]::after {
+  right: 8px;
+  position: absolute;
+}
+
+th.sorted[data-order="-1"]::after {
+content: "▼"
+}
+
+th.sorted[data-order="1"]::after {
+content: "▲"
+}
